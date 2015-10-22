@@ -1,0 +1,25 @@
+# Bharog Baneri Website Project
+
+Anish Khazane, Hemaxi Desai, Rishabh Parikh, Arun Pingali, Hunya Lakhani, Anand Kuchibotla
+
+### Download the Repository
+
+```sh
+git clone git@github.com:akuchibotla/bharogbaneri.git
+```
+
+If the above doesn't work, clone it using HTTPS:
+```sh
+git clone https://github.com/akuchibotla/bharogbaneri.git
+```
+
+You're all set!
+
+### Open Website
+
+```sh
+open bharogbaneri/html/index.html
+```
+
+Or simply navigate to the `bharogbaneri` folder, then into the `html` folder and open `index.html` to open the website on your default browser.
+
