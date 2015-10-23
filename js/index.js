@@ -43,57 +43,31 @@ $(document).ready(function() {
 			});
 
 			//creating markers
-			var marker1 = L.marker([30.558123, 77.504083],
-				{title: "WARD 1", icon: myIcon});
-			var marker2 = L.marker([30.549871, 77.503179],
-				{title: "WARD 2", icon: myIcon});
-			var marker3 = L.marker([30.549754, 77.519363],
-				{title: "WARD 3", icon: myIcon});
-			var marker4 = L.marker([30.542396, 77.508649],
-				{title: "WARD 4", icon: myIcon});
-			var marker5 = L.marker([30.562289, 77.516831],
-				{title: "WARD 5", icon: myIcon});
+			var marker1 = L.marker([30.558123, 77.504083], {title: "WARD 1", icon: myIcon})
+										.bindPopup("<p>Ward 1 Info</p>", L.popup({'closeOnClick': true}))
+										.on('click', function() { map.setView(marker1.getLatLng(), 15, {animate:true});})
+										.addTo(map);
 
-			//popups
-			marker1.bindPopup(
-				"<p>Ward 1 Info</p>",
-				L.popup({'closeOnClick': true}));
-			marker2.bindPopup(
-				"<p>Ward 2 Info</p>",
-				L.popup({'closeOnClick': true}));
-			marker3.bindPopup(
-				"<p>Ward 3 Info</p>",
-				L.popup({'closeOnClick': true}));
-			marker4.bindPopup(
-				"<p>Ward 4 Info</p>",
-				L.popup({'closeOnClick': true}));
-			marker5.bindPopup(
-				"<p>Ward 5 Info</p>",
-				L.popup({'closeOnClick': true}));
+			var marker2 = L.marker([30.549871, 77.503179], {title: "WARD 2", icon: myIcon})
+										.bindPopup("<p>Ward 2 Info</p>", L.popup({'closeOnClick': true}))
+										.on('click', function() { map.setView(marker2.getLatLng(), 15, {animate:true});})
+										.addTo(map);
 
-			//event handlers
-			marker1.on('click', function() {
-				map.setView(marker1.getLatLng(), 15, {animate:true});
-			});
-			marker2.on('click', function() {
-				map.setView(marker2.getLatLng(), 15, {animate:true});
-			});
-			marker3.on('click', function() {
-				map.setView(marker3.getLatLng(), 15, {animate:true});
-			});
-			marker4.on('click', function() {
-				map.setView(marker4.getLatLng(), 15, {animate:true});
-			});
-			marker5.on('click', function() {
-				map.setView(marker5.getLatLng(), 15, {animate:true});
-			});
+			var marker3 = L.marker([30.549754, 77.519363], {title: "WARD 3", icon: myIcon})
+										.bindPopup("<p>Ward 3 Info</p>", L.popup({'closeOnClick': true}))
+										.on('click', function() { map.setView(marker3.getLatLng(), 15, {animate:true});})
+										.addTo(map);
 
-			// adding markers
-			marker1.addTo(map);
-			marker2.addTo(map);
-			marker3.addTo(map);
-			marker4.addTo(map);
-			marker5.addTo(map);
+			var marker4 = L.marker([30.542396, 77.508649], {title: "WARD 4", icon: myIcon})
+										.bindPopup("<p>Ward 4 Info</p>", L.popup({'closeOnClick': true}))
+										.on('click', function() { map.setView(marker4.getLatLng(), 15, {animate:true});})
+										.addTo(map);
+
+			var marker5 = L.marker([30.562289, 77.516831], {title: "WARD 5", icon: myIcon})
+										.bindPopup("<p>Ward 5 Info</p>", L.popup({'closeOnClick': true}))
+										.on('click', function() { map.setView(marker5.getLatLng(), 15, {animate:true});})
+										.addTo(map);
+
 		}, 2000);
 	};
 
