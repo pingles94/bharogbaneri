@@ -19,18 +19,82 @@ $(document).ready(function() {
 	}).addTo(map);
 
 	var initialZoom = function() {
+		//Zoom
 		setTimeout(function() {
 			map.setView(center, 4, {animate:true});
-		}, 1500);
+		}, 100);
 		setTimeout(function() {
 			map.setView(center, 8, {animate:true});
-		}, 2000);
+		}, 600);
 		setTimeout(function() {
 			map.setView(center, 11, {animate:true});
-		}, 2500);
+		}, 1100);
 		setTimeout(function() {
 			map.setView(center, 15, {animate:true});
-		}, 3000);
+		}, 1600);
+
+		//UI init
+		setTimeout(function() {
+
+			//custom icon
+			var myIcon = L.icon({
+		    iconUrl: 'marker.png',
+				iconSize: [46,48]
+			});
+
+			//creating markers
+			var marker1 = L.marker([30.558123, 77.504083],
+				{title: "WARD 1", icon: myIcon});
+			var marker2 = L.marker([30.549871, 77.503179],
+				{title: "WARD 2", icon: myIcon});
+			var marker3 = L.marker([30.549754, 77.519363],
+				{title: "WARD 3", icon: myIcon});
+			var marker4 = L.marker([30.542396, 77.508649],
+				{title: "WARD 4", icon: myIcon});
+			var marker5 = L.marker([30.562289, 77.516831],
+				{title: "WARD 5", icon: myIcon});
+
+			//popups
+			marker1.bindPopup(
+				"<p>Ward 1 Info</p>",
+				L.popup({'closeOnClick': true}));
+			marker2.bindPopup(
+				"<p>Ward 2 Info</p>",
+				L.popup({'closeOnClick': true}));
+			marker3.bindPopup(
+				"<p>Ward 3 Info</p>",
+				L.popup({'closeOnClick': true}));
+			marker4.bindPopup(
+				"<p>Ward 4 Info</p>",
+				L.popup({'closeOnClick': true}));
+			marker5.bindPopup(
+				"<p>Ward 5 Info</p>",
+				L.popup({'closeOnClick': true}));
+
+			//event handlers
+			marker1.on('click', function() {
+				map.setView(marker1.getLatLng(), 15, {animate:true});
+			});
+			marker2.on('click', function() {
+				map.setView(marker2.getLatLng(), 15, {animate:true});
+			});
+			marker3.on('click', function() {
+				map.setView(marker3.getLatLng(), 15, {animate:true});
+			});
+			marker4.on('click', function() {
+				map.setView(marker4.getLatLng(), 15, {animate:true});
+			});
+			marker5.on('click', function() {
+				map.setView(marker5.getLatLng(), 15, {animate:true});
+			});
+
+			// adding markers
+			marker1.addTo(map);
+			marker2.addTo(map);
+			marker3.addTo(map);
+			marker4.addTo(map);
+			marker5.addTo(map);
+		}, 2000);
 	};
 
 	map.on('zoomend', function() {
@@ -39,7 +103,15 @@ $(document).ready(function() {
 	});
 
 	// define rectangle geographical bounds
-	var bounds = [[30.561467, 77.499169], [30.561135, 77.507366], [30.562982, 77.516936], [30.556959, 77.522172], [30.553854, 77.525819], [30.553522, 77.525347], [30.550713, 77.523888], [30.550307, 77.523674], [30.546352, 77.519640], [30.542582, 77.514790], [30.540877, 77.511000], [30.540955, 77.507022], [30.541344, 77.506118], [30.543252, 77.502456], [30.546639, 77.499924], [30.550026, 77.498794], [30.554815, 77.497845], [30.560498, 77.498885]];
+	var bounds = [[30.561467, 77.499169], [30.561135, 77.507366],
+								[30.562982, 77.516936], [30.556959, 77.522172],
+								[30.553854, 77.525819], [30.553522, 77.525347],
+								[30.550713, 77.523888], [30.550307, 77.523674],
+								[30.546352, 77.519640], [30.542582, 77.514790],
+								[30.540877, 77.511000], [30.540955, 77.507022],
+								[30.541344, 77.506118], [30.543252, 77.502456],
+								[30.546639, 77.499924], [30.550026, 77.498794],
+								[30.554815, 77.497845], [30.560498, 77.498885]];
 
 	// create an orange rectangle
 	L.polygon(bounds, {color: "#ff7800", weight: 1}).addTo(map);
@@ -49,11 +121,4 @@ $(document).ready(function() {
 
 	map.fitWorld();
 	initialZoom();
-
-	// adding markers
-	L.marker([30.558123, 77.504083], {title: "WARD 1"}).addTo(map);
-	L.marker([30.549871, 77.503179], {title: "WARD 2"}).addTo(map);
-	L.marker([30.549754, 77.519363], {title: "WARD 3"}).addTo(map);
-	L.marker([30.542396, 77.508649], {title: "WARD 4"}).addTo(map);
-	L.marker([30.562289, 77.516831], {title: 'WARD 5'}).addTo(map);
 });
