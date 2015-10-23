@@ -51,9 +51,9 @@ $(document).ready(function() {
 	initialZoom();
 
 	// adding markers
-	L.marker([30.558123, 77.504083], {title: "WARD 1"}).addTo(map)
-	L.marker([30.549871, 77.503179], title='WARD 2').addTo(map);
-	L.marker([30.549754, 77.519363], title='WARD 3').addTo(map);
-	L.marker([30.542396, 77.508649], title='WARD 4').addTo(map);
-	L.marker([30.562289, 77.516831], title='WARD 5').addTo(map);
+	L.marker([30.558123, 77.504083], {title: "WARD 1"}).addTo(map);
+	L.marker([30.549871, 77.503179], {title: "WARD 2"}).addTo(map);
+	L.marker([30.549754, 77.519363], {title: "WARD 3"}).addTo(map);
+	L.marker([30.542396, 77.508649], {title: "WARD 4"}).addTo(map);
+	L.marker([30.562289, 77.516831], {title: 'WARD 5'}).addTo(map);
 });
