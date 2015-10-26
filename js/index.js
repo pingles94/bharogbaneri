@@ -62,19 +62,20 @@ $(document).ready(function() {
 										.bindPopup("<b>Ward 4 Info</b>", L.popup({'closeOnClick': true}))
 										.on('click', function() { map.setView(marker4.getLatLng(), 15, {animate:true});})
 										.addTo(map);
-
+			var astley = L.popup({'closeOnClick': true, 'minWidth': 1000, 'maxHeight': 1000});
 			var marker5 = L.marker([30.562289, 77.516831], {title: "WARD 5", icon: myIcon})
-										.bindPopup("<b>Ward 5 Info</b>", L.popup({'closeOnClick': true}))
+										.bindPopup("<iframe width=\"300\" height=\"315\" src=\"https://www.youtube.com/embed/dQw4w9WgXcQ\" frameborder=\"0\" allowfullscreen></iframe>", astley)
 										.on('click', function() { map.setView(marker5.getLatLng(), 15, {animate:true});})
 										.addTo(map);
+			astley.update();
+			map.on('zoomend', function() {
+				if (map.getZoom() < 15) {
+					map.setView(center, map.getZoom(), {animate:true, duration: 10});
+				}
+			});
 
 		}, 2000);
-	};
-
-	map.on('zoomend', function() {
-		if (map.getZoom() < 15)
-			map.setView(center, map.getZoom(), {animate:true, duration: 10});
-	});
+	}
 
 	// define rectangle geographical bounds
 	var bounds = [[30.561467, 77.499169], [30.561135, 77.507366],
