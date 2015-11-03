@@ -1,9 +1,10 @@
 $(document).ready(function() {
-	$('#first').hide();
-	$('#second').hide();
-	$('.smallQuote').hide();
 
-	$('#first').delay(500).fadeIn(2000);
-	$('#second').delay(1500).fadeIn(2000);
-	$('.smallQuote').delay(2500).fadeIn(2000);
+	$('#first').css('opacity', '0.0');;
+	$('#second').css('opacity', '0.0');;
+	$('.smallQuote').css('opacity', '0.0');;
+
+	$('#first').delay(500).fadeTo(2000, 1);
+	$('#second').delay(2000).fadeTo(2000, 1);
+	$('.smallQuote').delay(3500).fadeTo(2000, 0.5);
 });

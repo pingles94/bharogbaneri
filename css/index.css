@@ -13,12 +13,23 @@ body {
 }
 
 .header > .logo {
-	background-image: url('../assets/logo.png');
+	font-family: 'Oswald', sans-serif;
+	text-transform: capitalize;
+	text-decoration: none;
+	padding-top: 25px;
+	font-size: 15px;
+	display: block;
+	color: white;
+	left: 20px;
+
+	background-image: url('../assets/logo2.png');
+	background-repeat: no-repeat;
+	background-position: 8px 0px;
 	background-size: 70px 70px;
 	position: absolute;
 	cursor: hand;
 	height: 70px;
-	width: 70px;
+	width: 150px;
 }
 
 .header ul {
@@ -40,7 +51,7 @@ body {
 	width: 150px;
 	cursor: hand;
 	color: gray;
-	
+
     -webkit-transition: color 0.5s;
     transition: color 0.5s;
 }
@@ -50,17 +61,20 @@ body {
 }
 
 .banner {
-	background-image: url('../assets/bg-edited.jpg');
+	background-image: url('../assets/bg2.png');
+	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: absolute;
-	right: 0;
 	height: 89%;
 	width: 100%;
+	right: 0;
 }
 
 .quote {
+	background-color: rgba(0, 0, 0, 0.5);
 	position: relative;
+	padding: 13px;
 	width: 275px;
 	float: right;
 	right: 5%;
@@ -79,5 +93,4 @@ body {
 	margin-top: 25px;
 	font-size: 15px;
 	color: white;
-	opacity: 0.5;
 }
