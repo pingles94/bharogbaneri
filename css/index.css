@@ -38,13 +38,13 @@ body {
 
 	background-image: url('../assets/logo3.png');
 	background-repeat: no-repeat;
-	background-position: 8px 0px;
-	background-size: 200px 70px;
+	background-position: 0px 0px;
+	background-size: 160px 60px;
 	position: absolute;
 	cursor: hand;
-	height: 70px;
-	width: 200px;
-	margin-top: 3px;
+	height: 60px;
+	width: 160px;
+	margin-top: 10px;
 }
 
 .header ul {
@@ -102,7 +102,7 @@ body {
 }
 
 #first {
-	font-family: 'Cinzel Black', serif;
+	font-family: 'Open Sans', serif;
 	letter-spacing: 5px;
 }
 
@@ -112,8 +112,9 @@ body {
 }
 
 .quote > .bigQuote {
-	font-family: Impact, Charcoal, sans-serif;
-	font-size: 150px;
+	font-size: 60px;
 	color: white;
 	opacity: 0.8;
+	margin-bottom: 30px;
+	margin-left: 30px;
 }
