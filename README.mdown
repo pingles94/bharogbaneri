@@ -23,3 +23,8 @@ open bharogbaneri/html/index.html
 
 Or simply navigate to the `bharogbaneri` folder, then into the `html` folder and open `index.html` to open the website on your default browser.
 
+### Rails deploy
+From the bharogbaneri directory:
+```sh
+bin/rails server -b 0.0.0.0 -p 3000 -e development
+```
